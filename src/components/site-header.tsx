@@ -10,10 +10,10 @@ import {
 } from "@/components/ui/sheet";
 
 const nav = [
-  { label: "New", href: "/" },
-  { label: "Men", href: "/" },
-  { label: "Women", href: "/" },
-  { label: "Sale", href: "/" },
+  { label: "New", href: "/shop" },
+  { label: "Men", href: "/shop" },
+  { label: "Women", href: "/shop" },
+  { label: "Sale", href: "/shop" },
 ];
 
 export function SiteHeader({ cartCount = 2 }: { cartCount?: number }) {

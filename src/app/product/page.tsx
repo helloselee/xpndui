@@ -17,6 +17,7 @@ import {
   Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext,
 } from "@/components/ui/carousel";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Swatch } from "@/components/ui/swatch";
 import {
   Accordion, AccordionItem, AccordionTrigger, AccordionContent,
 } from "@/components/ui/accordion";
@@ -110,20 +111,18 @@ export default function ProductDetail() {
             {/* Color */}
             <div className="space-y-2">
               <Label>Color: <span className="text-muted-foreground">{color}</span></Label>
-              <RadioGroup value={color} onValueChange={setColor} className="flex gap-2">
+              <div className="flex gap-2">
                 {colors.map((c) => (
-                  <button
+                  <Swatch
                     key={c.name}
-                    type="button"
+                    color={c.value}
+                    label={c.name}
+                    selected={color === c.name}
                     onClick={() => setColor(c.name)}
-                    aria-label={c.name}
-                    className={`size-8 rounded-full border transition-all ${
-                      color === c.name ? "ring-2 ring-ring ring-offset-2 ring-offset-background" : "border-border"
-                    }`}
-                    style={{ backgroundColor: c.value }}
+                    className="size-8"
                   />
                 ))}
-              </RadioGroup>
+              </div>
             </div>
 
             {/* Size */}
