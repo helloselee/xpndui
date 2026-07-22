@@ -5,6 +5,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Slider } from "@/components/ui/slider";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
+import { Swatch } from "@/components/ui/swatch";
 
 export const CATEGORIES = ["Tops", "Bottoms", "Outerwear", "Accessories"];
 export const COLORS = [
@@ -71,18 +72,12 @@ export function ShopFilters({
         <p className="text-sm font-medium">Color</p>
         <div className="flex flex-wrap gap-2">
           {COLORS.map((c) => (
-            <button
+            <Swatch
               key={c.name}
-              type="button"
+              color={c.value}
+              label={c.name}
+              selected={filters.colors.includes(c.name)}
               onClick={() => onToggleColor(c.name)}
-              aria-label={c.name}
-              aria-pressed={filters.colors.includes(c.name)}
-              className={`size-7 rounded-full border transition-all ${
-                filters.colors.includes(c.name)
-                  ? "ring-2 ring-ring ring-offset-2 ring-offset-background"
-                  : "border-border"
-              }`}
-              style={{ backgroundColor: c.value }}
             />
           ))}
         </div>
