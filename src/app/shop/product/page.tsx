@@ -56,9 +56,9 @@ export default function ProductDetail() {
       <main className="mx-auto max-w-6xl px-6 py-8">
         {/* Breadcrumb */}
         <nav className="mb-6 text-sm text-muted-foreground">
-          <Link href="/" className="hover:text-foreground">Home</Link>
+          <Link href="/shop" className="hover:text-foreground">Home</Link>
           <span className="mx-2">/</span>
-          <Link href="/" className="hover:text-foreground">Trousers</Link>
+          <Link href="/shop/collection" className="hover:text-foreground">Trousers</Link>
           <span className="mx-2">/</span>
           <span className="text-foreground">Linen Trouser</span>
         </nav>

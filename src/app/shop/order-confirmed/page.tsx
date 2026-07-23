@@ -100,8 +100,8 @@ export default function OrderConfirmed() {
         </Card>
 
         <div className="mt-8 flex justify-center gap-3">
-          <Button nativeButton={false} render={<Link href="/shop" />}>Continue shopping</Button>
-          <Button variant="outline" nativeButton={false} render={<Link href="/" />}>Back home</Button>
+          <Button nativeButton={false} render={<Link href="/shop/collection" />}>Continue shopping</Button>
+          <Button variant="outline" nativeButton={false} render={<Link href="/shop" />}>Back home</Button>
         </div>
       </main>
 

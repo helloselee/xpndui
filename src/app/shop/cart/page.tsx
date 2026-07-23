@@ -73,7 +73,7 @@ export default function Cart() {
             <p className="max-w-sm text-sm text-muted-foreground">
               Nothing here yet. Explore the edit and find something worth keeping.
             </p>
-            <Button nativeButton={false} render={<Link href="/" />}>Continue shopping</Button>
+            <Button nativeButton={false} render={<Link href="/shop/collection" />}>Continue shopping</Button>
           </div>
         ) : (
           <div className="mt-8 grid gap-10 lg:grid-cols-[1fr_360px]">
@@ -81,7 +81,7 @@ export default function Cart() {
             <div className="divide-y divide-border border-y border-border">
               {lines.map((l) => (
                 <div key={l.id} className="flex gap-4 py-5">
-                  <Link href="/product" className="w-24 shrink-0">
+                  <Link href="/shop/product" className="w-24 shrink-0">
                     <div className="overflow-hidden rounded-md border border-border">
                       <AspectRatio ratio={3 / 4}>
                         <div className="size-full" style={{ backgroundColor: l.tone }} />
@@ -92,7 +92,7 @@ export default function Cart() {
                   <div className="flex flex-1 flex-col">
                     <div className="flex items-start justify-between gap-3">
                       <div>
-                        <Link href="/product" className="text-sm font-medium hover:underline">
+                        <Link href="/shop/product" className="text-sm font-medium hover:underline">
                           {l.name}
                         </Link>
                         <p className="mt-0.5 text-sm text-muted-foreground">
@@ -199,7 +199,7 @@ export default function Cart() {
                     </div>
                   </div>
 
-                  <Button size="lg" className="w-full" nativeButton={false} render={<Link href="/checkout" />}>
+                  <Button size="lg" className="w-full" nativeButton={false} render={<Link href="/shop/checkout" />}>
                     Checkout
                   </Button>
                   <div className="flex items-center justify-center gap-1.5 text-xs text-muted-foreground">

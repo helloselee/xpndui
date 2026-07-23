@@ -69,7 +69,7 @@ export default function Search() {
               <p className="max-w-xs text-sm text-muted-foreground">
                 Check the spelling or try a broader term.
               </p>
-              <Button variant="outline" size="sm" nativeButton={false} render={<Link href="/shop" />}>
+              <Button variant="outline" size="sm" nativeButton={false} render={<Link href="/shop/collection" />}>
                 Browse all
               </Button>
             </div>

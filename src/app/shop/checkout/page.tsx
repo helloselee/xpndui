@@ -46,7 +46,7 @@ export default function Checkout() {
 
   const onSubmit = (e: FormEvent) => {
     e.preventDefault();
-    router.push("/order-confirmed");
+    router.push("/shop/order-confirmed");
   };
 
   return (
@@ -54,7 +54,7 @@ export default function Checkout() {
       <SiteHeader cartCount={4} />
 
       <main className="mx-auto max-w-6xl px-6 py-10">
-        <Link href="/cart" className="mb-6 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+        <Link href="/shop/cart" className="mb-6 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
           <ChevronLeft className="size-4" /> Back to bag
         </Link>
         <h1 className="text-2xl font-medium tracking-tight">Checkout</h1>
