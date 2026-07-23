@@ -2,6 +2,7 @@
   "name": "ds-playground",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "pnpm@10.32.1",
   "scripts": {
     "dev": "pnpm --filter showcase dev",
     "build": "pnpm --filter showcase build",

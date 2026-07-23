@@ -1,0 +1,46 @@
+name: Release
+
+# Publishes @xpndui/ui to npm on a version tag (e.g. `git tag v0.1.1 && git push --tags`).
+# Uses npm Trusted Publishing (OIDC) — no NPM_TOKEN secret is stored.
+#
+# One-time setup on npmjs.com (maintainer):
+#   1. Publish @xpndui/ui once (locally: `npm login` then
+#      `pnpm --filter @xpndui/ui publish`) so the package exists.
+#   2. On the package's npm settings → "Trusted Publisher", add this repo and
+#      workflow file (.github/workflows/release.yml). After that, releases run
+#      token-free via the OIDC exchange below.
+#
+# Release flow: bump packages/ui/package.json version, commit, then push a tag.
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: read
+  id-token: write # required for npm Trusted Publishing (OIDC)
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: "https://registry.npmjs.org"
+
+      # Trusted Publishing needs a recent npm (>= 11.5.1)
+      - run: npm install -g npm@latest
+
+      - run: pnpm install --frozen-lockfile
+
+      - run: pnpm --filter @xpndui/ui build
+
+      # dist is already built above; skip the prepublishOnly rebuild.
+      - run: npm publish --provenance --access public --ignore-scripts
+        working-directory: packages/ui
