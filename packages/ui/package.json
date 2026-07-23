@@ -6,10 +6,10 @@
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/helloselee/ds-playground.git",
+    "url": "git+https://github.com/helloselee/xpndui.git",
     "directory": "packages/ui"
   },
-  "homepage": "https://github.com/helloselee/ds-playground/tree/main/packages/ui",
+  "homepage": "https://github.com/helloselee/xpndui/tree/main/packages/ui",
   "sideEffects": [
     "**/*.css"
   ],
