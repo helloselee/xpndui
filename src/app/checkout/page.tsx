@@ -2,8 +2,8 @@
 
 import { useState, type FormEvent } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { ChevronLeft, Lock, CreditCard, Truck, Zap } from "lucide-react";
-import { toast } from "sonner";
 
 import { SiteHeader } from "@/components/site-header";
 import { Button } from "@/components/ui/button";
@@ -38,6 +38,7 @@ function Field({ id, label, className, ...props }: React.ComponentProps<typeof I
 }
 
 export default function Checkout() {
+  const router = useRouter();
   const [ship, setShip] = useState("standard");
   const subtotal = summary.reduce((s, l) => s + l.price * l.qty, 0);
   const shipCost = ship === "express" ? 12 : 0;
@@ -45,7 +46,7 @@ export default function Checkout() {
 
   const onSubmit = (e: FormEvent) => {
     e.preventDefault();
-    toast.success("Order placed", { description: `Total $${total} · confirmation sent to your email` });
+    router.push("/order-confirmed");
   };
 
   return (

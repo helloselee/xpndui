@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Search, Menu } from "lucide-react";
+import { Search, Menu, Heart } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { CartButton } from "@/components/cart-button";
@@ -34,8 +34,17 @@ export function SiteHeader({ cartCount = 2 }: { cartCount?: number }) {
         </div>
 
         <div className="flex items-center gap-1">
-          <Button variant="ghost" size="icon" aria-label="Search">
+          <Button
+            variant="ghost" size="icon" aria-label="Search"
+            nativeButton={false} render={<Link href="/search" />}
+          >
             <Search />
+          </Button>
+          <Button
+            variant="ghost" size="icon" aria-label="Wishlist" className="hidden sm:inline-flex"
+            nativeButton={false} render={<Link href="/wishlist" />}
+          >
+            <Heart />
           </Button>
           <CartButton count={cartCount} />
 

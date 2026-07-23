@@ -6,8 +6,9 @@ import { SlidersHorizontal, LayoutGrid, List } from "lucide-react";
 
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import { ProductCard, type Product } from "@/components/product-card";
+import { ProductCard } from "@/components/product-card";
 import { ShopFilters, PRICE_MAX, type Filters } from "@/components/shop-filters";
+import { CATALOG, toProductCard } from "@/lib/products";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
@@ -20,23 +21,6 @@ import {
   Pagination, PaginationContent, PaginationItem, PaginationLink,
   PaginationPrevious, PaginationNext,
 } from "@/components/ui/pagination";
-
-type Item = Omit<Product, "price"> & { category: string; color: string; priceNum: number };
-
-const ALL: Item[] = [
-  { name: "Wool Overshirt", priceNum: 148, category: "Outerwear", color: "Sand", tone: "oklch(0.88 0.02 60)" },
-  { name: "Linen Trouser", priceNum: 98, was: "$130", category: "Bottoms", color: "Sage", tone: "oklch(0.9 0.01 120)", sale: true },
-  { name: "Cashmere Crew", priceNum: 220, category: "Tops", color: "Clay", tone: "oklch(0.85 0.03 40)" },
-  { name: "Cotton Tee", priceNum: 42, category: "Tops", color: "Fog", tone: "oklch(0.92 0.005 250)" },
-  { name: "Leather Belt", priceNum: 68, was: "$85", category: "Accessories", color: "Clay", tone: "oklch(0.8 0.04 50)", sale: true },
-  { name: "Merino Beanie", priceNum: 54, category: "Accessories", color: "Slate", tone: "oklch(0.87 0.02 200)" },
-  { name: "Silk Scarf", priceNum: 110, category: "Accessories", color: "Sand", tone: "oklch(0.9 0.03 340)" },
-  { name: "Canvas Tote", priceNum: 74, category: "Accessories", color: "Sand", tone: "oklch(0.86 0.02 90)" },
-  { name: "Corduroy Shirt", priceNum: 118, category: "Tops", color: "Clay", tone: "oklch(0.83 0.03 70)" },
-  { name: "Wide Chino", priceNum: 92, category: "Bottoms", color: "Sage", tone: "oklch(0.88 0.02 130)" },
-  { name: "Quilted Jacket", priceNum: 245, category: "Outerwear", color: "Slate", tone: "oklch(0.75 0.02 250)" },
-  { name: "Ribbed Socks", priceNum: 24, category: "Accessories", color: "Fog", tone: "oklch(0.91 0.005 200)" },
-];
 
 const PER_PAGE = 8;
 const emptyFilters: Filters = { cats: [], colors: [], price: [0, PRICE_MAX] };
@@ -56,7 +40,7 @@ export default function Shop() {
   };
 
   const results = useMemo(() => {
-    const filtered = ALL.filter(
+    const filtered = CATALOG.filter(
       (p) =>
         (filters.cats.length === 0 || filters.cats.includes(p.category)) &&
         (filters.colors.length === 0 || filters.colors.includes(p.color)) &&
@@ -71,10 +55,6 @@ export default function Shop() {
   const pageCount = Math.max(1, Math.ceil(results.length / PER_PAGE));
   const current = Math.min(page, pageCount);
   const shown = results.slice((current - 1) * PER_PAGE, current * PER_PAGE);
-
-  const toProduct = (i: Item): Product => ({
-    name: i.name, price: `$${i.priceNum}`, was: i.was, tone: i.tone, sale: i.sale,
-  });
 
   const filterProps = {
     filters,
@@ -167,7 +147,7 @@ export default function Shop() {
             ) : view === "grid" ? (
               <div className="grid grid-cols-2 gap-x-5 gap-y-8 md:grid-cols-3">
                 {shown.map((p) => (
-                  <ProductCard key={p.name} product={toProduct(p)} />
+                  <ProductCard key={p.name} product={toProductCard(p)} />
                 ))}
               </div>
             ) : (
