@@ -10,18 +10,18 @@ import { SiteFooter } from "@/components/site-footer";
 import { ProductCard } from "@/components/product-card";
 import { ShopFilters, PRICE_MAX, type Filters } from "@/components/shop-filters";
 import { CATALOG, toProductCard } from "@/lib/products";
-import { Button } from "@xpnd/ui";
-import { Badge } from "@xpnd/ui";
-import { AspectRatio } from "@xpnd/ui";
-import { Separator } from "@xpnd/ui";
+import { Button } from "@xpndui/ui";
+import { Badge } from "@xpndui/ui";
+import { AspectRatio } from "@xpndui/ui";
+import { Separator } from "@xpndui/ui";
 import {
   Select, SelectContent, SelectItem, SelectTrigger, SelectValue,
-} from "@xpnd/ui";
-import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from "@xpnd/ui";
+} from "@xpndui/ui";
+import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from "@xpndui/ui";
 import {
   Pagination, PaginationContent, PaginationItem, PaginationLink,
   PaginationPrevious, PaginationNext,
-} from "@xpnd/ui";
+} from "@xpndui/ui";
 
 const PER_PAGE = 8;
 const emptyFilters: Filters = { cats: [], colors: [], price: [0, PRICE_MAX] };

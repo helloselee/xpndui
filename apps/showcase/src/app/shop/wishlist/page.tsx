@@ -8,7 +8,7 @@ import { toast } from "sonner";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { ProductCard } from "@/components/product-card";
-import { Button } from "@xpnd/ui";
+import { Button } from "@xpndui/ui";
 import { CATALOG, toProductCard } from "@/lib/products";
 
 const initial = CATALOG.filter((p) =>

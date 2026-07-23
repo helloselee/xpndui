@@ -3,12 +3,12 @@ import Link from "next/link";
 import { RotateCcw, Clock, BadgeCheck } from "lucide-react";
 
 import { ContentLayout } from "@/components/content-layout";
-import { Button } from "@xpnd/ui";
-import { Separator } from "@xpnd/ui";
-import { Card, CardContent } from "@xpnd/ui";
+import { Button } from "@xpndui/ui";
+import { Separator } from "@xpndui/ui";
+import { Card, CardContent } from "@xpndui/ui";
 import {
   Accordion, AccordionItem, AccordionTrigger, AccordionContent,
-} from "@xpnd/ui";
+} from "@xpndui/ui";
 
 export const metadata: Metadata = {
   title: "Returns — Atelier",

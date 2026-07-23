@@ -4,42 +4,42 @@ import { useState } from "react";
 import { Info, AlertTriangle, Package, Bell, Trash2, MoreHorizontal } from "lucide-react";
 import { toast } from "sonner";
 
-import { Button } from "@xpnd/ui";
-import { Badge, IndicatorBadge } from "@xpnd/ui";
-import { Input } from "@xpnd/ui";
-import { Label } from "@xpnd/ui";
-import { Checkbox } from "@xpnd/ui";
-import { Slider } from "@xpnd/ui";
-import { Progress } from "@xpnd/ui";
-import { Skeleton } from "@xpnd/ui";
-import { Separator } from "@xpnd/ui";
-import { Swatch } from "@xpnd/ui";
-import { RadioGroup, RadioGroupItem } from "@xpnd/ui";
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@xpnd/ui";
-import { Alert, AlertTitle, AlertDescription } from "@xpnd/ui";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@xpnd/ui";
-import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@xpnd/ui";
-import { Avatar, AvatarFallback } from "@xpnd/ui";
-import { Tooltip, TooltipTrigger, TooltipContent } from "@xpnd/ui";
+import { Button } from "@xpndui/ui";
+import { Badge, IndicatorBadge } from "@xpndui/ui";
+import { Input } from "@xpndui/ui";
+import { Label } from "@xpndui/ui";
+import { Checkbox } from "@xpndui/ui";
+import { Slider } from "@xpndui/ui";
+import { Progress } from "@xpndui/ui";
+import { Skeleton } from "@xpndui/ui";
+import { Separator } from "@xpndui/ui";
+import { Swatch } from "@xpndui/ui";
+import { RadioGroup, RadioGroupItem } from "@xpndui/ui";
+import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@xpndui/ui";
+import { Alert, AlertTitle, AlertDescription } from "@xpndui/ui";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@xpndui/ui";
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@xpndui/ui";
+import { Avatar, AvatarFallback } from "@xpndui/ui";
+import { Tooltip, TooltipTrigger, TooltipContent } from "@xpndui/ui";
 import {
   Select, SelectContent, SelectItem, SelectTrigger, SelectValue,
-} from "@xpnd/ui";
+} from "@xpndui/ui";
 import {
   Table, TableBody, TableCell, TableHead, TableHeader, TableRow,
-} from "@xpnd/ui";
+} from "@xpndui/ui";
 import {
   DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel,
   DropdownMenuSeparator, DropdownMenuTrigger,
-} from "@xpnd/ui";
+} from "@xpndui/ui";
 import {
   AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent,
   AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle,
   AlertDialogTrigger,
-} from "@xpnd/ui";
+} from "@xpndui/ui";
 import {
   Pagination, PaginationContent, PaginationItem, PaginationLink,
   PaginationPrevious, PaginationNext, PaginationEllipsis,
-} from "@xpnd/ui";
+} from "@xpndui/ui";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { ProductCard, type Product } from "@/components/product-card";
 

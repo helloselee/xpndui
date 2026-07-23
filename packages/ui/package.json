@@ -1,5 +1,5 @@
 {
-  "name": "@xpnd/ui",
+  "name": "@xpndui/ui",
   "version": "0.1.0",
   "description": "xpnd design system — components, tokens, and utilities on shadcn/Base UI.",
   "type": "module",

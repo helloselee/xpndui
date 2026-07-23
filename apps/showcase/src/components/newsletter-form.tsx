@@ -3,8 +3,8 @@
 import { useState, type FormEvent, type ChangeEvent } from "react";
 import { toast } from "sonner";
 
-import { Input } from "@xpnd/ui";
-import { Button } from "@xpnd/ui";
+import { Input } from "@xpndui/ui";
+import { Button } from "@xpndui/ui";
 
 export function NewsletterForm() {
   const [email, setEmail] = useState("");

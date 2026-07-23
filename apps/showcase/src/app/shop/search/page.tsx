@@ -7,9 +7,9 @@ import { Search as SearchIcon } from "lucide-react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { ProductCard } from "@/components/product-card";
-import { Input } from "@xpnd/ui";
-import { Button } from "@xpnd/ui";
-import { Badge } from "@xpnd/ui";
+import { Input } from "@xpndui/ui";
+import { Button } from "@xpndui/ui";
+import { Badge } from "@xpndui/ui";
 import { CATALOG, toProductCard } from "@/lib/products";
 
 const suggestions = ["Linen", "Wool", "Tote", "Cashmere"];

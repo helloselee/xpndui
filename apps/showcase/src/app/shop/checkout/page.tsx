@@ -6,16 +6,16 @@ import { useRouter } from "next/navigation";
 import { ChevronLeft, Lock, CreditCard, Truck, Zap } from "lucide-react";
 
 import { SiteHeader } from "@/components/site-header";
-import { Button } from "@xpnd/ui";
-import { Input } from "@xpnd/ui";
-import { Label } from "@xpnd/ui";
-import { Separator } from "@xpnd/ui";
-import { AspectRatio } from "@xpnd/ui";
-import { Card, CardContent, CardHeader, CardTitle } from "@xpnd/ui";
-import { RadioGroup, RadioGroupItem } from "@xpnd/ui";
+import { Button } from "@xpndui/ui";
+import { Input } from "@xpndui/ui";
+import { Label } from "@xpndui/ui";
+import { Separator } from "@xpndui/ui";
+import { AspectRatio } from "@xpndui/ui";
+import { Card, CardContent, CardHeader, CardTitle } from "@xpndui/ui";
+import { RadioGroup, RadioGroupItem } from "@xpndui/ui";
 import {
   Select, SelectContent, SelectItem, SelectTrigger, SelectValue,
-} from "@xpnd/ui";
+} from "@xpndui/ui";
 
 const summary = [
   { name: "Linen Trouser", meta: "Sand · 32", price: 98, tone: "oklch(0.9 0.01 120)", qty: 1 },

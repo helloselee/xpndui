@@ -1,6 +1,6 @@
 @import "tailwindcss";
-@import "@xpnd/ui/tokens.css";
+@import "@xpndui/ui/tokens.css";
 
-/* Generate utility classes used inside the @xpnd/ui package (node_modules
+/* Generate utility classes used inside the @xpndui/ui package (node_modules
    is not auto-scanned). Path is relative to this file. */
 @source "../../../../packages/ui/src";

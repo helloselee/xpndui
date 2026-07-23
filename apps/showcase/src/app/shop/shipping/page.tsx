@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import { Truck } from "lucide-react";
 
 import { ContentLayout } from "@/components/content-layout";
-import { Alert, AlertTitle, AlertDescription } from "@xpnd/ui";
+import { Alert, AlertTitle, AlertDescription } from "@xpndui/ui";
 import {
   Table, TableBody, TableCell, TableHead, TableHeader, TableRow,
-} from "@xpnd/ui";
+} from "@xpndui/ui";
 import {
   Accordion, AccordionItem, AccordionTrigger, AccordionContent,
-} from "@xpnd/ui";
+} from "@xpndui/ui";
 
 export const metadata: Metadata = {
   title: "Shipping — Atelier",
