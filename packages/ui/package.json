@@ -6,6 +6,11 @@
   "sideEffects": [
     "**/*.css"
   ],
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "tsc -p tsconfig.build.json && cp -r src/styles dist/styles",
+    "prepublishOnly": "pnpm run clean && pnpm run build"
+  },
   "exports": {
     ".": {
       "types": "./src/index.ts",
@@ -14,8 +19,18 @@
     "./tokens.css": "./src/styles/tokens.css"
   },
   "files": [
-    "src"
+    "dist"
   ],
+  "publishConfig": {
+    "access": "public",
+    "exports": {
+      ".": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "./tokens.css": "./dist/styles/tokens.css"
+    }
+  },
   "dependencies": {
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
