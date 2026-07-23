@@ -20,7 +20,7 @@ export function ProductCard({ product }: { product: Product }) {
   return (
     <Card className="group gap-0 pt-0">
       {/* Image bleeds to the card edges; the Card's overflow-hidden + rounded-xl clip it */}
-      <Link href="/product" className="relative block">
+      <Link href="/shop/product" className="relative block">
         <AspectRatio ratio={3 / 4}>
           <div
             className="size-full transition-transform duration-500 group-hover:scale-105"
@@ -36,7 +36,7 @@ export function ProductCard({ product }: { product: Product }) {
 
       {/* CardContent carries the horizontal padding; Card carries the bottom padding */}
       <CardContent className="pt-4">
-        <Link href="/product" className="flex items-start justify-between gap-2">
+        <Link href="/shop/product" className="flex items-start justify-between gap-2">
           <h3 className="text-sm font-medium">{product.name}</h3>
           <div className="text-right text-sm">
             <span className={product.sale ? "text-sale font-medium" : "font-medium"}>

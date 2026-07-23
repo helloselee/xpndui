@@ -54,7 +54,7 @@ export default function Wishlist() {
             <p className="max-w-sm text-sm text-muted-foreground">
               Tap the heart on any product to save it here for later.
             </p>
-            <Button nativeButton={false} render={<Link href="/shop" />}>Browse the shop</Button>
+            <Button nativeButton={false} render={<Link href="/shop/collection" />}>Browse the shop</Button>
           </div>
         ) : (
           <div className="grid grid-cols-2 gap-x-5 gap-y-8 md:grid-cols-4">

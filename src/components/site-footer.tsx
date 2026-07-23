@@ -1,9 +1,9 @@
 import Link from "next/link";
 
 const links = [
-  { label: "Shipping", href: "/shipping" },
-  { label: "Returns", href: "/returns" },
-  { label: "Contact", href: "/contact" },
+  { label: "Shipping", href: "/shop/shipping" },
+  { label: "Returns", href: "/shop/returns" },
+  { label: "Contact", href: "/shop/contact" },
 ];
 
 export function SiteFooter() {

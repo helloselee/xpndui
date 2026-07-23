@@ -11,10 +11,10 @@ import {
 } from "@/components/ui/sheet";
 
 const nav = [
-  { label: "New", href: "/shop" },
-  { label: "Men", href: "/shop" },
-  { label: "Women", href: "/shop" },
-  { label: "Sale", href: "/shop" },
+  { label: "New", href: "/shop/collection" },
+  { label: "Men", href: "/shop/collection" },
+  { label: "Women", href: "/shop/collection" },
+  { label: "Sale", href: "/shop/collection" },
 ];
 
 export function SiteHeader({ cartCount = 2 }: { cartCount?: number }) {
@@ -22,7 +22,7 @@ export function SiteHeader({ cartCount = 2 }: { cartCount?: number }) {
     <header className="sticky top-0 z-40 border-b border-border bg-background/80 backdrop-blur">
       <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-6">
         <div className="flex items-center gap-8">
-          <Link href="/" className="text-base font-semibold tracking-tight">
+          <Link href="/shop" className="text-base font-semibold tracking-tight">
             ATELIER
           </Link>
           <nav className="hidden gap-6 text-sm text-muted-foreground md:flex">
@@ -37,13 +37,13 @@ export function SiteHeader({ cartCount = 2 }: { cartCount?: number }) {
         <div className="flex items-center gap-1">
           <Button
             variant="ghost" size="icon" aria-label="Search"
-            nativeButton={false} render={<Link href="/search" />}
+            nativeButton={false} render={<Link href="/shop/search" />}
           >
             <Search />
           </Button>
           <Button
             variant="ghost" size="icon" aria-label="Wishlist" className="hidden sm:inline-flex"
-            nativeButton={false} render={<Link href="/wishlist" />}
+            nativeButton={false} render={<Link href="/shop/wishlist" />}
           >
             <Heart />
           </Button>

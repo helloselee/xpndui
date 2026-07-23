@@ -76,7 +76,7 @@ export default function Contact() {
           <Separator />
           <p className="text-sm text-muted-foreground">
             Prefer to browse? Head back to the{" "}
-            <a href="/shop" className="text-foreground underline-offset-4 hover:underline">shop</a>.
+            <a href="/shop/collection" className="text-foreground underline-offset-4 hover:underline">shop</a>.
           </p>
         </aside>
       </div>

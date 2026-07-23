@@ -83,7 +83,7 @@ export default function Returns() {
       </Accordion>
 
       <div className="mt-10">
-        <Button nativeButton={false} render={<Link href="/contact" />}>Still need help? Contact us</Button>
+        <Button nativeButton={false} render={<Link href="/shop/contact" />}>Still need help? Contact us</Button>
       </div>
     </ContentLayout>
   );
