@@ -5,6 +5,7 @@ import { Search, Menu, Heart } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { CartButton } from "@/components/cart-button";
+import { ThemeToggle } from "@/components/theme-toggle";
 import {
   Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle, SheetClose,
 } from "@/components/ui/sheet";
@@ -46,6 +47,7 @@ export function SiteHeader({ cartCount = 2 }: { cartCount?: number }) {
           >
             <Heart />
           </Button>
+          <ThemeToggle />
           <CartButton count={cartCount} />
 
           <Sheet>
