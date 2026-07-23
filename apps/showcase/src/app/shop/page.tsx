@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 
-import { Button } from "@xpnd/ui";
-import { Separator } from "@xpnd/ui";
-import { AspectRatio } from "@xpnd/ui";
+import { Button } from "@xpndui/ui";
+import { Separator } from "@xpndui/ui";
+import { AspectRatio } from "@xpndui/ui";
 import { ProductCard } from "@/components/product-card";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";

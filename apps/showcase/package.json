@@ -9,7 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@xpnd/ui": "workspace:*",
+    "@xpndui/ui": "workspace:*",
     "@base-ui/react": "^1.6.0",
     "lucide-react": "^1.25.0",
     "next": "16.2.10",

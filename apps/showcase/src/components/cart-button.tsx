@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { ShoppingBag } from "lucide-react";
 
-import { Button } from "@xpnd/ui";
-import { IndicatorBadge } from "@xpnd/ui";
+import { Button } from "@xpndui/ui";
+import { IndicatorBadge } from "@xpndui/ui";
 
 // Bundles the relative parent + icon + overlay count so call sites can't forget
 // the `relative` anchor (the classic overlay-badge footgun).

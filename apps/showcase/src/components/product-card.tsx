@@ -3,10 +3,10 @@
 import Link from "next/link";
 import { toast } from "sonner";
 
-import { Button } from "@xpnd/ui";
-import { Badge } from "@xpnd/ui";
-import { Card, CardContent } from "@xpnd/ui";
-import { AspectRatio } from "@xpnd/ui";
+import { Button } from "@xpndui/ui";
+import { Badge } from "@xpndui/ui";
+import { Card, CardContent } from "@xpndui/ui";
+import { AspectRatio } from "@xpndui/ui";
 
 export type Product = {
   name: string;

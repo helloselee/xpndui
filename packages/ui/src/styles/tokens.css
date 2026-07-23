@@ -1,4 +1,4 @@
-/* @xpnd/ui design tokens — the single source of truth for the design system.
+/* @xpndui/ui design tokens — the single source of truth for the design system.
    Consumers import this after "tailwindcss" so @theme/@apply resolve. */
 
 @import "tw-animate-css";

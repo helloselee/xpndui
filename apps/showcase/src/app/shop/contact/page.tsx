@@ -5,11 +5,11 @@ import { Mail, Clock, MessageSquare } from "lucide-react";
 import { toast } from "sonner";
 
 import { ContentLayout } from "@/components/content-layout";
-import { Button } from "@xpnd/ui";
-import { Input } from "@xpnd/ui";
-import { Label } from "@xpnd/ui";
-import { Textarea } from "@xpnd/ui";
-import { Separator } from "@xpnd/ui";
+import { Button } from "@xpndui/ui";
+import { Input } from "@xpndui/ui";
+import { Label } from "@xpndui/ui";
+import { Textarea } from "@xpndui/ui";
+import { Separator } from "@xpndui/ui";
 
 const details = [
   { icon: Mail, title: "Email", body: "help@atelier.com" },

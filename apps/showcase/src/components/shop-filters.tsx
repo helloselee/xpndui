@@ -1,11 +1,11 @@
 "use client";
 
-import { Label } from "@xpnd/ui";
-import { Checkbox } from "@xpnd/ui";
-import { Slider } from "@xpnd/ui";
-import { Separator } from "@xpnd/ui";
-import { Button } from "@xpnd/ui";
-import { Swatch } from "@xpnd/ui";
+import { Label } from "@xpndui/ui";
+import { Checkbox } from "@xpndui/ui";
+import { Slider } from "@xpndui/ui";
+import { Separator } from "@xpndui/ui";
+import { Button } from "@xpndui/ui";
+import { Swatch } from "@xpndui/ui";
 
 export const CATEGORIES = ["Tops", "Bottoms", "Outerwear", "Accessories"];
 export const COLORS = [

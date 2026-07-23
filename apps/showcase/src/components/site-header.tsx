@@ -3,12 +3,12 @@
 import Link from "next/link";
 import { Search, Menu, Heart } from "lucide-react";
 
-import { Button } from "@xpnd/ui";
+import { Button } from "@xpndui/ui";
 import { CartButton } from "@/components/cart-button";
 import { ThemeToggle } from "@/components/theme-toggle";
 import {
   Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle, SheetClose,
-} from "@xpnd/ui";
+} from "@xpndui/ui";
 
 const nav = [
   { label: "New", href: "/shop/collection" },

@@ -1,4 +1,4 @@
-# @xpnd/ui
+# @xpndui/ui
 
 The xpnd design system — accessible components, design tokens, and utilities built on
 [shadcn](https://ui.shadcn.com) conventions and [Base UI](https://base-ui.com) (not Radix),
@@ -7,7 +7,7 @@ styled with Tailwind CSS v4.
 ## Install
 
 ```bash
-pnpm add @xpnd/ui
+pnpm add @xpndui/ui
 # peer dependencies
 pnpm add @base-ui/react react react-dom
 ```
@@ -18,21 +18,21 @@ In your global CSS (e.g. `app/globals.css`):
 
 ```css
 @import "tailwindcss";
-@import "@xpnd/ui/tokens.css";
+@import "@xpndui/ui/tokens.css";
 
 /* Generate the utility classes used inside the package's compiled components.
    Adjust the relative path to your node_modules. */
-@source "../node_modules/@xpnd/ui/dist";
+@source "../node_modules/@xpndui/ui/dist";
 ```
 
-`@xpnd/ui/tokens.css` is the theme: it defines the color, radius, and font tokens
+`@xpndui/ui/tokens.css` is the theme: it defines the color, radius, and font tokens
 (light + dark) via Tailwind v4 `@theme`. Changing your app's tokens is done by
 overriding these CSS variables — there is no separate JS preset in v4.
 
 ## Usage
 
 ```tsx
-import { Button, Card, CardContent, Badge } from "@xpnd/ui";
+import { Button, Card, CardContent, Badge } from "@xpndui/ui";
 
 export function Example() {
   return (

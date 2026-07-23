@@ -3,10 +3,10 @@
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 
-import { Button } from "@xpnd/ui";
+import { Button } from "@xpndui/ui";
 import {
   DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger,
-} from "@xpnd/ui";
+} from "@xpndui/ui";
 
 export function ThemeToggle() {
   const { setTheme } = useTheme();

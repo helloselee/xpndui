@@ -34,11 +34,11 @@
 
 ## B 셋업 (pnpm workspace 모노레포)
 
-- 구조: `packages/ui`(배포물) + `apps/showcase`(예제/문서). 예제는 `@xpnd/ui`를 `workspace:*`로 로컬 링크
+- 구조: `packages/ui`(배포물) + `apps/showcase`(예제/문서). 예제는 `@xpndui/ui`를 `workspace:*`로 로컬 링크
 - 외부 배포 → **`pnpm publish`** 로 npm 또는 사설 레지스트리에 semver 배포
 - Tailwind v4 패키징:
   - 컴포넌트는 **TSX 소스**로 배포 + **Tailwind preset / 토큰 CSS** 동봉
-  - 소비자는 우리 패키지를 스캔 대상에 추가 (`@source "../node_modules/@xpnd/ui"`), 토큰 CSS import
+  - 소비자는 우리 패키지를 스캔 대상에 추가 (`@source "../node_modules/@xpndui/ui"`), 토큰 CSS import
   - `@base-ui/react`는 **peerDependency**, `class-variance-authority`·`tailwind-merge`는 dependency
 
 ## B의 비용과 완화

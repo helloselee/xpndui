@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowUpRight, ArrowRight } from "lucide-react";
 
-import { Button } from "@xpnd/ui";
-import { Separator } from "@xpnd/ui";
-import { AspectRatio } from "@xpnd/ui";
+import { Button } from "@xpndui/ui";
+import { Separator } from "@xpndui/ui";
+import { AspectRatio } from "@xpndui/ui";
 import { ThemeToggle } from "@/components/theme-toggle";
 
 export const metadata: Metadata = {

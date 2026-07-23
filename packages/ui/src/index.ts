@@ -1,4 +1,4 @@
-// @xpnd/ui — public API barrel.
+// @xpndui/ui — public API barrel.
 export * from "./lib/utils";
 
 export * from "./components/accordion";

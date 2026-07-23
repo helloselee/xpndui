@@ -8,19 +8,19 @@ import { toast } from "sonner";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { ProductCard, type Product } from "@/components/product-card";
-import { Button } from "@xpnd/ui";
-import { Badge } from "@xpnd/ui";
-import { Label } from "@xpnd/ui";
-import { Separator } from "@xpnd/ui";
-import { AspectRatio } from "@xpnd/ui";
+import { Button } from "@xpndui/ui";
+import { Badge } from "@xpndui/ui";
+import { Label } from "@xpndui/ui";
+import { Separator } from "@xpndui/ui";
+import { AspectRatio } from "@xpndui/ui";
 import {
   Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext,
-} from "@xpnd/ui";
-import { RadioGroup, RadioGroupItem } from "@xpnd/ui";
-import { Swatch } from "@xpnd/ui";
+} from "@xpndui/ui";
+import { RadioGroup, RadioGroupItem } from "@xpndui/ui";
+import { Swatch } from "@xpndui/ui";
 import {
   Accordion, AccordionItem, AccordionTrigger, AccordionContent,
-} from "@xpnd/ui";
+} from "@xpndui/ui";
 
 const gallery = [
   "oklch(0.9 0.01 120)",

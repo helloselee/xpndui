@@ -7,18 +7,18 @@ import { toast } from "sonner";
 
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import { Button } from "@xpnd/ui";
-import { Input } from "@xpnd/ui";
-import { Badge } from "@xpnd/ui";
-import { Separator } from "@xpnd/ui";
-import { Progress } from "@xpnd/ui";
-import { AspectRatio } from "@xpnd/ui";
-import { Card, CardContent, CardHeader, CardTitle } from "@xpnd/ui";
+import { Button } from "@xpndui/ui";
+import { Input } from "@xpndui/ui";
+import { Badge } from "@xpndui/ui";
+import { Separator } from "@xpndui/ui";
+import { Progress } from "@xpndui/ui";
+import { AspectRatio } from "@xpndui/ui";
+import { Card, CardContent, CardHeader, CardTitle } from "@xpndui/ui";
 import {
   AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent,
   AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle,
   AlertDialogTrigger,
-} from "@xpnd/ui";
+} from "@xpndui/ui";
 
 type Line = {
   id: number;
