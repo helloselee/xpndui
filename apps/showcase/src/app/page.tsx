@@ -77,12 +77,12 @@ export default function Landing() {
         </h2>
         <div className="mt-12 grid gap-x-10 gap-y-10 sm:grid-cols-2">
           {capabilities.map((c) => (
-            <div key={c.n} className="border-t border-border pt-5">
-              <div className="flex items-baseline gap-3">
-                <span className="font-mono text-sm text-muted-foreground">{c.n}</span>
-                <h3 className="text-lg font-medium">{c.title}</h3>
+            <div key={c.n} className="flex gap-3 border-t border-border pt-5">
+              <span className="w-6 shrink-0 font-mono text-sm leading-7 text-muted-foreground">{c.n}</span>
+              <div className="flex-1">
+                <h3 className="text-lg font-medium leading-7">{c.title}</h3>
+                <p className="mt-2 text-sm text-muted-foreground text-pretty">{c.body}</p>
               </div>
-              <p className="mt-2 pl-9 text-sm text-muted-foreground text-pretty">{c.body}</p>
             </div>
           ))}
         </div>
