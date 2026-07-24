@@ -1,0 +1,35 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "xpndui",
+  "homepage": "https://github.com/helloselee/xpndui",
+  "items": [
+    {
+      "name": "hero-studio",
+      "type": "registry:block",
+      "title": "Studio hero",
+      "description": "A typographic hero section for a studio/agency landing.",
+      "dependencies": ["@xpndui/ui", "lucide-react"],
+      "files": [
+        {
+          "path": "src/registry/blocks/hero-studio.tsx",
+          "type": "registry:block",
+          "target": "components/blocks/hero-studio.tsx"
+        }
+      ]
+    },
+    {
+      "name": "capabilities",
+      "type": "registry:block",
+      "title": "Capabilities grid",
+      "description": "A numbered two-column list of capabilities/services.",
+      "dependencies": ["@xpndui/ui"],
+      "files": [
+        {
+          "path": "src/registry/blocks/capabilities.tsx",
+          "type": "registry:block",
+          "target": "components/blocks/capabilities.tsx"
+        }
+      ]
+    }
+  ]
+}
