@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hero-studio",
+  "title": "Studio hero",
+  "description": "A typographic hero section for a studio/agency landing.",
+  "dependencies": [
+    "@xpndui/ui",
+    "lucide-react"
+  ],
+  "files": [
+    {
+      "path": "src/registry/blocks/hero-studio.tsx",
+      "content": "import Link from \"next/link\";\nimport { ArrowRight } from \"lucide-react\";\n\nimport { Button } from \"@xpndui/ui\";\n\ntype Cta = { label: string; href: string };\n\nexport function HeroStudio({\n  eyebrow = \"Brand studio — est. 2026\",\n  title = \"We build brands worth keeping.\",\n  description = \"A studio that designs, builds, and operates consumer brands end to end — identity, product, and the storefront they live in.\",\n  primaryCta = { label: \"See the work\", href: \"#work\" },\n  secondaryCta = { label: \"Start a project\", href: \"#contact\" },\n}: {\n  eyebrow?: string;\n  title?: string;\n  description?: string;\n  primaryCta?: Cta;\n  secondaryCta?: Cta | null;\n}) {\n  return (\n    <section className=\"mx-auto max-w-6xl px-6 py-24 md:py-36\">\n      <p className=\"font-mono text-xs uppercase tracking-widest text-muted-foreground\">{eyebrow}</p>\n      <h1 className=\"mt-6 max-w-4xl text-5xl font-medium tracking-tight text-balance md:text-7xl\">\n        {title}\n      </h1>\n      <p className=\"mt-6 max-w-xl text-lg text-muted-foreground text-pretty\">{description}</p>\n      <div className=\"mt-10 flex items-center gap-3\">\n        <Button size=\"lg\" nativeButton={false} render={<Link href={primaryCta.href} />}>\n          {primaryCta.label} <ArrowRight />\n        </Button>\n        {secondaryCta && (\n          <Button size=\"lg\" variant=\"ghost\" nativeButton={false} render={<Link href={secondaryCta.href} />}>\n            {secondaryCta.label}\n          </Button>\n        )}\n      </div>\n    </section>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/blocks/hero-studio.tsx"
+    }
+  ],
+  "type": "registry:block"
+}

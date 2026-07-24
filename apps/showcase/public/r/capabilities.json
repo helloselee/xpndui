@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "capabilities",
+  "title": "Capabilities grid",
+  "description": "A numbered two-column list of capabilities/services.",
+  "dependencies": [
+    "@xpndui/ui"
+  ],
+  "files": [
+    {
+      "path": "src/registry/blocks/capabilities.tsx",
+      "content": "type Capability = { n: string; title: string; body: string };\n\nconst defaultItems: Capability[] = [\n  { n: \"01\", title: \"Brand & identity\", body: \"Naming, voice, and visual systems built to last past a launch.\" },\n  { n: \"02\", title: \"Product design\", body: \"From first sketch to a line worth putting your name on.\" },\n  { n: \"03\", title: \"Commerce & storefront\", body: \"Design systems and stores that turn browsers into believers.\" },\n  { n: \"04\", title: \"Growth & retention\", body: \"The unglamorous work that keeps a brand alive.\" },\n];\n\nexport function Capabilities({\n  eyebrow = \"01 — What we do\",\n  heading = \"A studio for the whole arc of a brand.\",\n  items = defaultItems,\n}: {\n  eyebrow?: string;\n  heading?: string;\n  items?: Capability[];\n}) {\n  return (\n    <section className=\"mx-auto max-w-6xl px-6 py-20\">\n      <p className=\"font-mono text-xs uppercase tracking-widest text-muted-foreground\">{eyebrow}</p>\n      <h2 className=\"mt-3 max-w-2xl text-3xl font-medium tracking-tight\">{heading}</h2>\n      <div className=\"mt-12 grid gap-x-10 gap-y-10 sm:grid-cols-2\">\n        {items.map((c) => (\n          <div key={c.n} className=\"flex gap-3 border-t border-border pt-5\">\n            <span className=\"w-6 shrink-0 font-mono text-sm leading-7 text-muted-foreground\">{c.n}</span>\n            <div className=\"flex-1\">\n              <h3 className=\"text-lg font-medium leading-7\">{c.title}</h3>\n              <p className=\"mt-2 text-sm text-muted-foreground text-pretty\">{c.body}</p>\n            </div>\n          </div>\n        ))}\n      </div>\n    </section>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/blocks/capabilities.tsx"
+    }
+  ],
+  "type": "registry:block"
+}
